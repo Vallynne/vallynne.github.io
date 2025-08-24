@@ -149,47 +149,64 @@ h1 {
   margin: 10px 0 20px;
 }
 
+/* Two columns: left flexible, right capped to 560px (but fluid) */
 .two-col {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 20px;
-  align-items: flex-start;   /* text and video start at the top */
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 560px);
+  gap: 24px;
+  align-items: stretch;            /* equal row height so we can center the video block */
   margin: 24px 0;
 }
 
 .two-col .text {
-  flex: 1 1 50%;             /* left column takes half */
   min-width: 250px;
 }
 
+/* Right column wrapper = aspect box + vertical centering within the column */
 .two-col .video {
-  flex: 1 1 50%;             /* RIGHT column takes the other half */
-  display: flex;
-  justify-content: center;   /* center the iframe inside this half */
-  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin-inline: auto;
+
+  /* center the whole video block vertically within the row height */
+  margin-block: auto;
+
+  /* kill typography effects from #app */
+  line-height: 0;
+  font-size: 0;
+
+  /* we control aspect ratio with ::before; also clip any bleed */
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-.two-col .video iframe.youtube {
+/* 16:9 aspect via pseudo-element (no HTML change) */
+.two-col .video::before {
+  content: "";
   display: block;
+  padding-top: 56.25%; /* 9/16 */
+}
+
+/* Absolute-fill the iframe to the 16:9 box */
+.two-col .video iframe.youtube {
+  position: absolute;
+  inset: 0;                 /* fill exactly, no zoom */
   width: 100%;
-  max-width: 560px;          /* the actual video box you’ll see */
-  aspect-ratio: 16 / 9;      /* 16:9 guaranteed */
-  height: auto;
+  height: 100%;
+  display: block;
   border: 0;
 }
 
+/* Stack on mobile */
 @media (max-width: 768px) {
   .two-col {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
   .two-col .video {
-    flex: 1 1 auto;
-  }
-  .two-col .video iframe.youtube {
     max-width: 100%;
   }
 }
 
-.two-col .video iframe.youtube { max-width: 560px !important; }
 
 </style>
