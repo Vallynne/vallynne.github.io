@@ -67,50 +67,50 @@ export default Vue.extend({
 <style scoped>
 
 .project-item {
-  height: 300px;
-  margin-bottom: 20px;
   width: 100%;
+  margin-bottom: 20px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  border-radius: 6px;       /* optional: rounded corners */
 }
 
 .project-item-image {
   background-size: cover;
   background-position: center;
-  height: 100%;
   width: 100%;
-  transition: all 0.2s;
+  height: 215px;            /* fixed height to match your 460x215 icons */
+  transition: transform 0.2s;
 }
+
 .project-item-image:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .project-item:hover {
-filter: brightness(120%);
+  filter: brightness(110%);
 }
 
 .title-bar {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  background-color: #222222;
-}
-
-.title-text {
+  background-color: #222;
+  color: #fff;
   padding: 10px;
 }
 
-@media only screen and (min-width: 620px){
+.title-text {
+  font-size: 1.1rem;
+}
+
+@media only screen and (min-width: 920px){
   .projects-list {
-    max-width: 900px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    grid-auto-rows: minmax(250px, auto);
-  }
+  max-width: 1000px; 
+  margin: 0 left;
+  display: flex;
+  flex-direction: column; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;                  
+}
 
   .project-item {
     margin: 0px;
@@ -118,12 +118,6 @@ filter: brightness(120%);
     width: 100%;
   }
 
-  .wide {
-    grid-column-end: span 2;
-  }
-  .high {
-    grid-row-end: span 2;
-  }
 }
 
 
