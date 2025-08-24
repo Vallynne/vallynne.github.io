@@ -10,10 +10,10 @@
             <div class="project-item-image" :style="{ 'background-image': 'url(' + project.iconUrl + ')' }">
             </div>
             <div class="title-bar" :style="{ 'background-color': project.accentColor + 'DD' }">
-                <div class="title-text">
-                  {{ project.name }}
-                </div>
+              <div class="title-text">
+                {{ displayName(project) }}
               </div>
+            </div>
           </div>
         </template>
       </div>
@@ -32,16 +32,22 @@
 import Vue from "vue";
 import ProjectDetailsOverlay from "@/components/ProjectDetailsOverlay.vue";
 import ProjectData from "@/data/ProjectData.ts";
+import { i18n } from "@/i18n";
+
+type LocalizedProject = ProjectData & {
+  nameEn?: string;
+  nameJa?: string;
+  htmlEn?: string;
+  htmlJa?: string;
+};
 
 export default Vue.extend({
   name: "ProjectsList",
-  components: {
-    ProjectDetailsOverlay,
-  },
+  components: { ProjectDetailsOverlay },
   props: {
-    projects: Array
+    projects: Array as () => LocalizedProject[]
   },
-  data: function () {
+  data() {
     return {
       showPopup: false,
       popupTitle: "",
@@ -49,18 +55,24 @@ export default Vue.extend({
       popupContent: ""
     };
   },
-  methods: {
-    showDetails: function (item: ProjectData) {
-      // if (event) {
-      //   alert(event.target);
-      // }
-      this.popupTitle = item.name;
-      this.popupColor = item.accentColor;
-      this.popupContent = item.htmlDescription;
-      this.showPopup = true;
-      window.scrollTo(0,0);
-    },
+  computed: {
+    lang(): 'en'|'ja' { return i18n.lang as 'en'|'ja'; }
   },
+  methods: {
+    displayName(item: LocalizedProject) {
+      return this.lang === 'ja' ? (item.nameJa || item.name) : (item.nameEn || item.name);
+    },
+    displayHtml(item: LocalizedProject) {
+      return this.lang === 'ja' ? (item.htmlJa || item.htmlDescription) : (item.htmlEn || item.htmlDescription);
+    },
+    showDetails(item: LocalizedProject) {
+      this.popupTitle = this.displayName(item);
+      this.popupColor = item.accentColor;
+      this.popupContent = this.displayHtml(item);
+      this.showPopup = true;
+      window.scrollTo(0, 0);
+    }
+  }
 });
 </script>
 
