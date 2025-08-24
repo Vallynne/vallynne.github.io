@@ -27,11 +27,11 @@ export const messages = {
         email: 'Email',
         linkedin: 'LinkedIn'
       },
-    projects: {
-        title: 'Projects',
+      projects: {
+        title: 'Project Showcase',
         blurb: 'A hand-picked selection of games I’ve worked on.',
-        morePrefix: 'More on',
-        moreLinkText: 'my external portfolio'
+        morePrefix: 'More info on my other work on my',
+        moreLinkText: 'LinkedIn'
       },
   },
   ja: {
@@ -49,12 +49,12 @@ export const messages = {
         email: 'メール',
         linkedin: 'LinkedIn'
       },
-    projects: {
-        title: '作品',
-        blurb: '関わったタイトルの一部を紹介します。',
-        morePrefix: '詳しくは',
-        moreLinkText: '外部ポートフォリオをご覧ください'
-      },
+      projects: {
+        title: '制作実績',
+        blurb: '携わったタイトルの一部を紹介します。',
+        morePrefix: 'その他の実績については',
+        moreLinkText: 'LinkedInをご覧ください'
+      }
   }
 };
 

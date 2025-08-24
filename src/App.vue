@@ -149,4 +149,47 @@ h1 {
   margin: 10px 0 20px;
 }
 
+.two-col {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: flex-start;   /* text and video start at the top */
+  margin: 24px 0;
+}
+
+.two-col .text {
+  flex: 1 1 50%;             /* left column takes half */
+  min-width: 250px;
+}
+
+.two-col .video {
+  flex: 1 1 50%;             /* RIGHT column takes the other half */
+  display: flex;
+  justify-content: center;   /* center the iframe inside this half */
+  align-items: center;
+}
+
+.two-col .video iframe.youtube {
+  display: block;
+  width: 100%;
+  max-width: 560px;          /* the actual video box you’ll see */
+  aspect-ratio: 16 / 9;      /* 16:9 guaranteed */
+  height: auto;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .two-col {
+    flex-direction: column;
+  }
+  .two-col .video {
+    flex: 1 1 auto;
+  }
+  .two-col .video iframe.youtube {
+    max-width: 100%;
+  }
+}
+
+.two-col .video iframe.youtube { max-width: 560px !important; }
+
 </style>
