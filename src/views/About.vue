@@ -1,39 +1,74 @@
 <template>
-  <div style="margin-bottom: 80px;">
-    <h1>Hello!</h1>
-
-    <div class="paragraph">
-      <div>
-        I'm <strong>John Matrix</strong>, a former Delta Force operative, now a hobbyist lumberjack.<br/>
-        I spend my days living alone with my daughter Jenny, and cutting trees and carrying trunks around to keep in shape.
+  <div class="about">
+    <div class="about-header">
+      <div class="header-text">
+        <h1>{{ t('about.title') }}</h1>
+        <p class="intro">{{ t('about.p1') }}</p>
+        <p v-html="t('about.p2')"></p>
+        <p>{{ t('about.p3') }}</p>
       </div>
-
-      <div style="margin-top: 20px;">I've worked on  <router-link to="/game-projects">stuff</router-link>, on <router-link to="/other-projects">other stuff</router-link>, and took part in <router-link to="/resume">a few things</router-link> as well.</div>
-
-      <div style="margin-top: 40px;">I'm <strong>currently looking for a job</strong> as a monk, like my good friend John Rambo did a few years back. You can reach me at <a href="mailto:johnmatrix@deltaforce.us">johnmatrix@deltaforce.us</a> or <router-link to="/contact">through here</router-link>.</div>
+      <div class="photo">
+        <img src="/img/about_photo.jpg" alt="My photo" />
+      </div>
     </div>
 
-    <div class="photo">
-      <img src="img/avatar.png" alt="Avatar of John" /> 
-    </div>
-
-    <div style="clear:both"></div>
 
   </div>
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+import { t } from '@/i18n'
+
+export default Vue.extend({
+  name: 'About',
+  methods: { t }
+})
+</script>
+
 <style scoped>
-.paragraph {
-  max-width: 700px;
-  margin-bottom: 20px;
+.about-header {
+  display: flex;
+  align-items: flex-start;
+  margin: 24px 0 16px;
+  min-height: 600px;
+  /* adjust 60px to your footer’s height */
+  box-sizing: border-box;
 }
 
+/* text fills available space */
+.header-text {
+  flex: 1;
+  max-width: 65%;
+  /* keep text column wide */
+}
+
+/* tighter title + intro */
+.header-text h1 {
+  margin: 0;
+  /* kill browser defaults */
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+/* photo gets narrower column on the right */
 .photo {
-  margin-top: 50px;
-  text-align: center;
+  flex-shrink: 0;
+  margin-left: 10px;
+  /* push photo all the way to the right */
 }
 
-@media only screen and (min-width: 620px){
+.photo img {
+  width: 240px;
+  /* adjust size */
+  height: auto;
+  border-radius: 8px;
+  /* 50% if circle */
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+}
+
+@media only screen and (min-width: 620px) {
   .paragraph {
     float: left;
   }
@@ -44,5 +79,4 @@
     padding-left: 80px;
   }
 }
-
 </style>

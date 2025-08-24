@@ -1,62 +1,93 @@
 <template>
   <div class="header">
     <div class="nav-bar">
-      <router-link to="/">About me</router-link>
-      <router-link to="/game-projects">Games</router-link>
-      <router-link to="/contact">Contact</router-link>
+      <div class="nav-links">
+        <router-link to="/">{{ t('nav.about') }}</router-link>
+        <router-link to="/game-projects">{{ t('nav.games') }}</router-link>
+        <router-link to="/contact">{{ t('nav.contact') }}</router-link>
+      </div>
+
+      <div class="lang-switch">
+        <button :class="{ active: lang==='en' }" @click="setLang('en')">EN</button>
+        <span class="sep">|</span>
+        <button :class="{ active: lang==='ja' }" @click="setLang('ja')">JP</button>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import { i18n, t } from "@/i18n";
 
 export default Vue.extend({
   name: "Header",
-  //   props: {
-  //     msg: String,
-  //   },
+  computed: {
+    lang() { return i18n.lang; }
+  },
+  methods: {
+    setLang(l: 'en'|'ja') { i18n.setLang(l); },
+    t
+  }
 });
 </script>
 
 <style scoped lang="less">
-
 @import '../css/variables.less';
 
 .header {
   width: 100%;
 }
 
+/* main nav bar flex row */
 .nav-bar {
-  text-align: right;
+  display: flex;
+  justify-content: space-between; /* links left, switch right */
+  align-items: center;
   padding: 20px;
   line-height: 3em;
 }
 
-a {
+/* nav links group */
+.nav-links a {
   text-transform: uppercase;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 0 15px;
   padding-bottom: 8px;
   white-space: nowrap;
   display: inline-block;
 }
 
 .router-link-exact-active {
-  border: 0px solid @textColor;
+  border: 0 solid @textColor;
   border-bottom-width: 2px;
 }
 
-@media only screen and (max-width: 620px){
-  .nav-bar {
-    line-height: 2em;
-  }
-
-  a {
-    margin-left: 9px;
-    margin-right: 9px;
-    padding-bottom: 0px;
-  }
+/* language switch group */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
 }
 
+.lang-switch .sep { margin: 0 6px; opacity: .6; }
+
+.lang-switch button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+.lang-switch button.active {
+  opacity: 1;
+  border-bottom: 2px solid @textColor;
+}
+
+@media only screen and (max-width: 620px) {
+  .nav-bar { flex-direction: column; align-items: flex-start; }
+  .nav-links a { margin: 0 9px; padding-bottom: 0; }
+  .lang-switch { margin-top: 8px; }
+}
 </style>
