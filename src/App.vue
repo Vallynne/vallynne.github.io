@@ -119,4 +119,34 @@ h1 {
   opacity: 0
 }
 
+.download-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  margin-top: 16px;
+  border-radius: 6px;
+  border: 2px solid #5a78af;   /* accent color border */
+  background: #fff;            /* white background */
+  color: #5a78af;              /* accent color text */
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.05s ease;
+}
+
+.download-btn:hover {
+  background: #5a78af;         /* filled on hover */
+  color: #fff;                 /* invert text for readability */
+}
+
+.download-btn:active {
+  transform: translateY(1px);
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #555;
+  margin: 10px 0 20px;
+}
+
 </style>

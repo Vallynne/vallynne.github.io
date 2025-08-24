@@ -4,7 +4,33 @@
       <div class="header-text">
         <h1>{{ t('about.title') }}</h1>
         <p class="intro">{{ t('about.p1') }}</p>
-        <p v-html="t('about.p2')"></p>
+        <p>
+          <span v-if="lang === 'en'">
+            I created and shipped
+            <router-link :to="{ path: '/game-projects', hash: '#project-shores' }">
+              Shores Unknown
+            </router-link>,
+            an Unreal-powered tactical RPG built with a small distributed team, and contributed to
+            <router-link :to="{ path: '/game-projects', hash: '#project-flintlock' }">
+              Flintlock: The Siege of Dawn
+            </router-link>
+            and
+            <router-link :to="{ path: '/game-projects', hash: '#project-rocksmith' }">
+              Rocksmith+
+            </router-link>.
+          </span>
+
+          <span v-else>
+            小規模チームでタクティカルRPG『
+            <router-link :to="{ path: '/game-projects', hash: '#project-shores' }">Shores Unknown</router-link>
+            』を開発・リリースし、その後『
+            <router-link :to="{ path: '/game-projects', hash: '#project-flintlock' }">Flintlock: The Siege of
+              Dawn</router-link>
+            』や『
+            <router-link :to="{ path: '/game-projects', hash: '#project-rocksmith' }">Rocksmith+</router-link>
+            』など複数のタイトルに携わりました。
+          </span>
+        </p>
         <p>{{ t('about.p3') }}</p>
       </div>
       <div class="photo">
@@ -17,14 +43,22 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import { t } from '@/i18n'
+import Vue from "vue";
+import { t, i18n } from "@/i18n"; // <-- import t directly
 
 export default Vue.extend({
-  name: 'About',
-  methods: { t }
-})
+  name: "About",
+  methods: {
+    t, // <-- expose t() to the template
+  },
+  computed: {
+    lang(): "en" | "ja" {
+      return i18n.lang as "en" | "ja";
+    },
+  },
+});
 </script>
+
 
 <style scoped>
 .about-header {

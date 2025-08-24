@@ -17,7 +17,7 @@ export const messages = {
     about: {
       title: 'Nice to meet you!',
       p1: `I’m Ilya Rudnev, a game designer and developer with over a decade of industry experience, currently based in Sapporo, Japan.`,
-      p2: `I created and shipped Shores Unknown, an Unreal-powered tactical RPG built with a small distributed team, and contributed to several other titles including Flintlock: The Siege of Dawn and Rocksmith+.`,
+      p2: `I created and shipped <a href="/game-projects#project-shores">Shores Unknown</a>, an Unreal-powered tactical RPG built with a small distributed team, and contributed to several other titles including <a href="/game-projects#project-flintlock">Flintlock: The Siege of Dawn</a> and <a href="/game-projects#project-rocksmith">Rocksmith+</a>.`,
       p3: `With 7+ years of specializing in technical game design (mainly in Unreal Engine), I bring both creative and technical expertise to help teams realize their vision from early concept through to release, with a focus on RPG and action RPG gameplay and combat encounter design.`
     },
     contact: {
@@ -39,7 +39,7 @@ export const messages = {
     about: {
       title: 'はじめまして！',
       p1: `私はゲームデザイナー／デベロッパーのラドニフ・イリヤです。業界経験は10年以上にわたり、現在は札幌を拠点に活動しています。`,
-      p2: `小規模な分散チームでUnreal Engineを使って自作のタクティカルRPG『Shores Unknown』を作り、その後は『Flintlock: The Siege of Dawn』や『Rocksmith+』にも関わりました。`,
+      p2: `小規模チームでタクティカルRPG『<a href="/game-projects#project-shores">Shores Unknown</a>』を開発・リリースし、その後『<a href="/game-projects#project-flintlock">Flintlock: The Siege of Dawn</a>』や『<a href="/game-projects#project-rocksmith">Rocksmith+</a>』など複数のタイトルに携わりました。`,
       p3: `Unreal Engineを使ったテクニカルデザインに7年以上の経験があり、企画の初期段階からリリースまで、RPG／アクションRPGのゲームプレイや敵との戦闘設計を中心に、デザインと実装の両面からチームのビジョンを形にしています。`    
     },
     contact: {

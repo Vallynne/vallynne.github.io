@@ -1,31 +1,37 @@
 <template>
-    <div>
-      <div class="projects-list">
-        <template v-for="project in projects">
-          <div
-            :key="project.id"
-              @click="showDetails(project)"
-              class="project-item"
-              :class="{ 'wide': project.isWide, 'high': project.isHigh }">
-            <div class="project-item-image" :style="{ 'background-image': 'url(' + project.iconUrl + ')' }">
-            </div>
-            <div class="title-bar" :style="{ 'background-color': project.accentColor + 'DD' }">
-              <div class="title-text">
-                {{ displayName(project) }}
-              </div>
-            </div>
-          </div>
-        </template>
-      </div>
+  <div>
+    <div class="projects-list">
+      <div
+        v-for="project in projects"
+        :key="project.id"
+        :id="project.id"
+        class="project-item"
+        role="button"
+        tabindex="0"
+        @click="showDetails(project)"
+        @keyup.enter="showDetails(project)"
+        @keyup.space="showDetails(project)"
+      >
+        <div class="project-item-image">
+          <img :src="project.iconUrl" :alt="displayName(project)" />
+        </div>
 
-      <ProjectDetailsOverlay
-        v-on:close="showPopup = false"
-        :visible="showPopup"
-        :title="popupTitle"
-        :htmlContent="popupContent"
-        :color="popupColor"
-      />
+        <div class="title-bar" :style="{ backgroundColor: project.accentColor + 'DD' }">
+          <div class="title-text">
+            {{ displayName(project) }}
+          </div>
+        </div>
+      </div>
     </div>
+
+    <ProjectDetailsOverlay
+      :visible="showPopup"
+      :title="popupTitle"
+      :htmlContent="popupContent"
+      :color="popupColor"
+      @close="showPopup = false"
+    />
+  </div>
 </template>
 
 <script lang="ts">
@@ -35,28 +41,27 @@ import ProjectData from "@/data/ProjectData.ts";
 import { i18n } from "@/i18n";
 
 type LocalizedProject = ProjectData & {
-  nameEn?: string;
-  nameJa?: string;
-  htmlEn?: string;
-  htmlJa?: string;
+  nameEn?: string; nameJa?: string;
+  htmlEn?: string; htmlJa?: string;
 };
 
 export default Vue.extend({
   name: "ProjectsList",
   components: { ProjectDetailsOverlay },
-  props: {
-    projects: Array as () => LocalizedProject[]
-  },
+  props: { projects: Array as () => LocalizedProject[] },
   data() {
-    return {
-      showPopup: false,
-      popupTitle: "",
-      popupColor: "",
-      popupContent: ""
-    };
+    return { showPopup: false, popupTitle: "", popupColor: "", popupContent: "" };
   },
   computed: {
     lang(): 'en'|'ja' { return i18n.lang as 'en'|'ja'; }
+  },
+  watch: {
+    '$route.hash': {
+      immediate: true,
+      handler(newHash: string) {
+        this.maybeOpenFromHash(newHash);
+      }
+    }
   },
   methods: {
     displayName(item: LocalizedProject) {
@@ -71,6 +76,19 @@ export default Vue.extend({
       this.popupContent = this.displayHtml(item);
       this.showPopup = true;
       window.scrollTo(0, 0);
+    },
+    maybeOpenFromHash(hash: string) {
+      if (!hash) return;
+      const id = hash.replace('#', '');
+      const item = (this.projects || []).find(p => p.id === id);
+      if (!item) return;
+      // Scroll to the card, then open
+      this.$nextTick(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // slight delay so scroll happens first
+        setTimeout(() => this.showDetails(item), 150);
+      });
     }
   }
 });
@@ -84,14 +102,14 @@ export default Vue.extend({
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  border-radius: 6px;       /* optional: rounded corners */
+  border-radius: 6px;      
 }
 
 .project-item-image {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 215px;            /* fixed height to match your 460x215 icons */
+  height: 215px;            
   transition: transform 0.2s;
 }
 
@@ -113,9 +131,9 @@ export default Vue.extend({
   font-size: 1.1rem;
 }
 
-@media only screen and (min-width: 920px){
+@media only screen {
   .projects-list {
-  max-width: 1000px; 
+  max-width: 920px; 
   margin: 0 left;
   display: flex;
   flex-direction: column; 
@@ -131,7 +149,5 @@ export default Vue.extend({
   }
 
 }
-
-
 
 </style>
