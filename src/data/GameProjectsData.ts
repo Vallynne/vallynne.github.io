@@ -23,6 +23,10 @@ const shores: LocalizedProject = Object.assign(
     nameJa: "Shores Unknown",
     htmlEn: `
       <div class="paragraph notice">
+        <strong>Platforms:</strong> PC (Early Access), Nintendo Switch (Unreleased)
+      </div>
+
+      <div class="paragraph notice">
         <a target="_blank" href="https://store.steampowered.com/app/899460/Shores_Unknown/">
           <strong>🌊 Shores Unknown on Steam</strong>
         </a>
@@ -58,6 +62,8 @@ const shores: LocalizedProject = Object.assign(
       <div class="paragraph">
         Most of the implementation was done in <strong>Unreal Engine Blueprints (~95%)</strong>, with supporting C++ used for
         data management, custom structures, saving/loading, and editor extensions—enabling fast iteration with a maintainable core.
+        <strong>I also ported the project to Nintendo Switch myself</strong>, adapting UI and control scheme for the platform,
+        and performing performance optimization to ensure stable 30 fps in the majority of gameplay scenarios.
       </div>
 
       <div class="paragraph">
@@ -95,6 +101,10 @@ const shores: LocalizedProject = Object.assign(
     `,
     htmlJa: `
       <div class="paragraph notice">
+        <strong>対応プラットフォーム：</strong> PC（アーリーアクセス）、Nintendo Switch（未発売）
+      </div>
+
+      <div class="paragraph notice">
         <a target="_blank" href="https://store.steampowered.com/app/899460/Shores_Unknown/">
           <strong>🌊 『Shores Unknown』 Steam ストアページ</strong>
         </a>
@@ -128,7 +138,8 @@ const shores: LocalizedProject = Object.assign(
 
       <div class="paragraph">
         実装の大部分は <strong>Unreal EngineのBlueprint（約95%）</strong> で行い、C++ はデータ管理、カスタム構造体、セーブ／ロード、エディタ拡張などの補助に使用。
-        これにより、迅速な反復と保守しやすい基盤の両立を実現しました。
+        これにより、迅速な反復と保守しやすい基盤の両立を実現しました。さらに、<strong>Nintendo Switch への移植も自ら担当</strong>し、
+        UIと操作体系の適応を行い、安定した30fpsを大半のゲームプレイシーンで実現するためのパフォーマンス最適化を行いました。
       </div>
 
       <div class="paragraph">
@@ -167,6 +178,7 @@ const shores: LocalizedProject = Object.assign(
   }
 );
 
+
 // --- Flintlock: The Siege of Dawn ---
 const flint: LocalizedProject = Object.assign(
   new ProjectData(
@@ -181,15 +193,20 @@ const flint: LocalizedProject = Object.assign(
     nameEn: "Flintlock: The Siege of Dawn",
     nameJa: "Flintlock: The Siege of Dawn",
     htmlEn: `
+        <p class="caption" style="margin: -6px 0 10px; opacity: .8;">Developer: A44 Games (in collaboration with Shapefarm)</p>
         <div class="paragraph notice">
-        <a target="_blank" href="https://store.steampowered.com/app/1832040/Flintlock_The_Siege_of_Dawn/">
+          <strong>Platforms:</strong> PlayStation 5, Xbox Series X|S, PC
+        </div>
+
+        <div class="paragraph notice">
+          <a target="_blank" href="https://store.steampowered.com/app/1832040/Flintlock_The_Siege_of_Dawn/">
             <strong>⚔ Flintlock: The Siege of Dawn on Steam</strong>
-        </a>
+          </a>
         </div>
 
         <div class="paragraph center">
-        <iframe class="youtube" src="https://www.youtube.com/embed/RUVkGaAW-8w" frameborder="0" allowfullscreen></iframe>
-        <p><em>Official Trailer</em></p>
+          <iframe class="youtube" src="https://www.youtube.com/embed/RUVkGaAW-8w" frameborder="0" allowfullscreen></iframe>
+          <p><em>Official Trailer</em></p>
         </div>
 
         <h2>Gameplay Features</h2>
@@ -290,15 +307,20 @@ const flint: LocalizedProject = Object.assign(
         </div>
     `,
     htmlJa: `
+        <p class="caption" style="margin: -6px 0 10px; opacity: .8;">開発： A44 Games（Shapefarmと協業）</p>
         <div class="paragraph notice">
-        <a target="_blank" href="https://store.steampowered.com/app/1832040/Flintlock_The_Siege_of_Dawn/">
+          <strong>対応プラットフォーム：</strong> PlayStation 5、Xbox Series X|S、PC
+        </div>
+
+        <div class="paragraph notice">
+          <a target="_blank" href="https://store.steampowered.com/app/1832040/Flintlock_The_Siege_of_Dawn/">
             <strong>⚔ 『Flintlock: The Siege of Dawn』 Steam ストアページ</strong>
-        </a>
+          </a>
         </div>
 
         <div class="paragraph center">
-        <iframe class="youtube" src="https://www.youtube.com/embed/RUVkGaAW-8w" frameborder="0" allowfullscreen></iframe>
-        <p><em>公式トレーラー</em></p>
+          <iframe class="youtube" src="https://www.youtube.com/embed/RUVkGaAW-8w" frameborder="0" allowfullscreen></iframe>
+          <p><em>公式トレーラー</em></p>
         </div>
 
         <h2>主な特徴</h2>
@@ -415,6 +437,11 @@ const rocksmith: LocalizedProject = Object.assign(
     nameEn: "Rocksmith+",
     nameJa: "ロックスミス＋",
     htmlEn: `
+      <p class="caption" style="margin: -6px 0 10px; opacity: .8;">Developer: Ubisoft Osaka & Ubisoft San Francisco</p>
+      <div class="paragraph notice">
+        <strong>Platforms:</strong> PlayStation 4/5, iOS, Android, PC
+      </div>
+
       <div class="paragraph notice">
         <a target="_blank" href="https://store.steampowered.com/app/2834910/Rocksmith/">
           <strong>🎸 Rocksmith+ on Steam</strong>
@@ -427,15 +454,15 @@ const rocksmith: LocalizedProject = Object.assign(
       </div>
 
       <div class="paragraph">
-        <strong>Rocksmith+</strong> is Ubisoft’s interactive music-learning service for <strong>guitar and bass</strong>, featuring a large and growing song library, real-time feedback, practice tools, and guided lessons. Players can learn at their own pace with customizable difficulty, technique videos, and arrangement options tuned for different skill levels.
+        <strong>Rocksmith+</strong> is Ubisoft’s interactive music-learning service for guitar and bass, featuring a large and growing song library, real-time feedback, practice tools, and guided lessons. Players can learn at their own pace with customizable difficulty, technique videos, and arrangement options tuned for different skill levels.
       </div>
 
       <div class="paragraph">
         <strong>My contributions</strong>
         <ul>
-          <li>Implemented in the Snowdrop engine and <strong>iterated on game UIs</strong> such as <strong>Song Results</strong> and <strong>Pause Screen</strong> in close collaboration with UI designers.</li>
-          <li>Implemented the first prototype of <strong>Tab view</strong>, then collaborated cross-discipline to take it to release (see video below).</li>
-          <li>Worked with the feature owner to take <strong>chord panes</strong> and <strong>bass chord charts</strong> to a release-ready state — article:
+          <li>Implemented in the Snowdrop engine and iterated on game UIs such as Song Results and Pause Screen in close collaboration with UI designers.</li>
+          <li>Implemented the first prototype of Tab view, then collaborated cross-discipline to take it to release (see video below).</li>
+          <li>Worked with the feature owner to take chord panes and bass chord charts to a release-ready state — article:
             <a target="_blank" href="https://www.ubisoft.com/en-ca/game/rocksmith/plus/news-updates/37P255QRlxXvNJN09l2asc/bass-chord-charts-how-to-play-bass-chords">Bass Chord Charts (EN)</a>.
           </li>
         </ul>
@@ -447,6 +474,11 @@ const rocksmith: LocalizedProject = Object.assign(
       </div>
     `,
     htmlJa: `
+    <p class="caption" style="margin: -6px 0 10px; opacity: .8;">開発： Ubisoft Osaka & Ubisoft San Francisco</p>
+      <div class="paragraph notice">
+        <strong>対応プラットフォーム：</strong> PlayStation 4/5、iOS、Android、PC
+      </div>
+
       <div class="paragraph notice">
         <a target="_blank" href="https://store.steampowered.com/app/2834910/Rocksmith/">
           <strong>🎸 『ロックスミス＋』 Steam ストアページ</strong>
@@ -459,15 +491,15 @@ const rocksmith: LocalizedProject = Object.assign(
       </div>
 
       <div class="paragraph">
-        <strong>『ロックスミス＋』</strong>は、<strong>ギター／ベース</strong>学習のためのインタラクティブなサービスです。拡張し続ける楽曲ライブラリ、リアルタイムのフィードバック、練習ツール、レッスンを備え、難易度やアレンジを調整しながらスキルに応じて自分のペースで学べます。
+        『ロックスミス＋』は、ギター／ベース学習のためのインタラクティブなサービスです。拡張し続ける楽曲ライブラリ、リアルタイムのフィードバック、練習ツール、レッスンを備え、難易度やアレンジを調整しながらスキルに応じて自分のペースで学べます。
       </div>
 
       <div class="paragraph">
         <strong>担当内容</strong>
         <ul>
-          <li>Snowdropエンジン上で<strong>「楽曲結果」</strong>や<strong>「一時停止」</strong>などのUIを、<strong>UIデザイナーと協力しながらブラッシュアップ</strong>。</li>
-          <li><strong>Tabビュー</strong>の初期プロトタイプを実装し、クロスファンクショナルに連携して製品版まで推進（下記動画）。</li>
-          <li>機能オーナーと協業し、<strong>コード表示ペイン</strong>と<strong>ベースのコード・チャート</strong>を出荷水準まで仕上げ — 解説記事：
+          <li>Snowdropエンジン上で「楽曲結果」や「一時停止」などのUIを、UIデザイナーと協力しながらブラッシュアップ。</li>
+          <li>Tabビューの初期プロトタイプを実装し、クロスファンクショナルに連携して製品版まで推進（下記動画）。</li>
+          <li>機能オーナーと協業し、コード表示ペインとベースのコード・チャートを出荷水準まで仕上げ — 解説記事：
             <a target="_blank" href="https://www.ubisoft.com/ja-jp/game/rocksmith/plus/news-updates/37P255QRlxXvNJN09l2asc/rocksmith-20225">日本語記事</a>。
           </li>
         </ul>
@@ -481,5 +513,128 @@ const rocksmith: LocalizedProject = Object.assign(
   }
 );
 
-// export
-export default [shores, flint, rocksmith];
+// --- Other Projects ---
+const other: LocalizedProject = Object.assign(
+  new ProjectData(
+    "project-other",
+    "Other Projects",
+    "img/projects/project-other-icon.jpg",
+    "",
+    "#64748b",
+    true
+  ),
+  {
+    nameEn: "Other Projects",
+    nameJa: "その他のプロジェクト",
+    htmlEn: `
+      <h2>Throne Rush</h2>
+      <p class="caption" style="margin: -6px 0 10px; opacity: .8;">Developer: Nexters</p>
+      <div class="paragraph notice">Platforms: iOS / Android, Browsers</div>
+      <div class="paragraph">
+        <a target="_blank" href="https://www.nexters.com/en/throne-rush/"><strong>Official site</strong></a>
+      </div>
+      <div class="paragraph">
+        An epic online strategy / town builder where you grow a kingdom and expand to claim the Throne.
+      </div>
+      <div class="paragraph">
+        <ul>
+          <li>Command and upgrade huge armies featuring LotR-inspired units, from knights and goblins to dragons and ents</li>
+          <li>Fortify your base with towers and walls</li>
+          <li>Hire and raise mighty heroes with unique abilities</li>
+          <li>Focus on social play: clans, clan wars, guild events and more</li>
+        </ul>
+      </div>
+      <div class="paragraph center">
+        <img src="/img/projects/project-thronerush-1.png" alt="Throne Rush screenshot" style="max-width:100%; height:auto; display:block; margin:0 auto;" />
+      </div>
+      <div class="paragraph">
+        One of Nexters’ early success stories, Throne Rush stayed in operation with regular updates for 10+ years,
+        was <strong>Facebook’s “Game of the Year” (2014)</strong>, and has accumulated <strong>76M+ installs worldwide</strong> over its lifetime.
+      </div>
+      <div class="paragraph">
+        <strong>My contributions</strong>
+        <ul>
+          <li>First playable prototype implemented in Warcraft 3 Map Editor</li>
+          <li>Unit and building design and balance</li>
+          <li>Pitched and designed new live ops features</li>
+          <li>Single-player campaign level/puzzle design</li>
+        </ul>
+      </div>
+
+      <h2>James Bond: World of Espionage</h2>
+      <p class="caption" style="margin: -6px 0 10px; opacity: .8;">Developer: Glu Mobile</p>
+      <div class="paragraph notice">Platforms: iOS / Android</div>
+      <div class="paragraph center">
+        <iframe class="youtube" src="https://www.youtube.com/embed/zd0054I6zos" frameborder="0" allowfullscreen></iframe>
+        <p><em>Announcement Trailer</em></p>
+      </div>
+      <div class="paragraph">
+        A mobile strategy title where players deploy Bond and other MI6 agents across the globe, grow their agency,
+        and vie for the role of M while thwarting world-threatening plots.
+      </div>
+      <div class="paragraph">
+        <strong>My contributions</strong>
+        <ul>
+          <li>Designed multiple features including PvP, crafting, and character abilities, ensuring licensor approvals</li>
+          <li>Balance tuning for the game economy during beta and live ops</li>
+          <li>Designed and tuned in-game events</li>
+        </ul>
+      </div>
+    `,
+    htmlJa: `
+      <h2>Throne Rush</h2>
+      <p class="caption" style="margin: -6px 0 10px; opacity: .8;">開発： Nexters</p>
+      <div class="paragraph notice">対応プラットフォーム： iOS / Android、ブラウザ</div>
+      <div class="paragraph">
+        <a target="_blank" href="https://www.nexters.com/en/throne-rush/"><strong>公式サイト</strong></a>
+      </div>
+      <div class="paragraph">
+        王国を育て、拡大し、王座を目指すエピックなオンライン・ストラテジー／タウンビルダー。
+      </div>
+      <div class="paragraph">
+        <ul>
+          <li>騎士やゴブリンからドラゴン、エントまで、LotR風のユニットで構成された大軍勢を指揮・強化</li>
+          <li>タワーや城壁で拠点を要塞化</li>
+          <li>固有アビリティを持つ英雄の雇用・育成</li>
+          <li>クラン、クラン戦、ギルドイベントなどソーシャル要素に注力</li>
+        </ul>
+      </div>
+      <div class="paragraph center">
+        <img src="/img/projects/project-thronerush-1.png" alt="Throne Rush スクリーンショット" style="max-width:100%; height:auto; display:block; margin:0 auto;" />
+      </div>
+      <div class="paragraph">
+        Nexters初期の成功作のひとつであり、10年以上にわたり運用と定期アップデートが続きました。2014年には<strong>Facebook「Game of the Year」</strong>を受賞し、累計<strong>7,600万超のインストール</strong>を記録しています。
+      </div>
+      <div class="paragraph">
+        <strong>担当内容</strong>
+        <ul>
+          <li>Warcraft 3 マップエディタでの初期プレイアブル・プロトタイプ実装</li>
+          <li>ユニット／建物の設計とバランス調整</li>
+          <li>ライブオプス向け新機能の提案・設計</li>
+          <li>シングルプレイヤー・キャンペーンのレベル／パズル設計</li>
+        </ul>
+      </div>
+
+      <h2>James Bond: World of Espionage</h2>
+      <p class="caption" style="margin: -6px 0 10px; opacity: .8;">開発： Glu Mobile</p>
+      <div class="paragraph notice">対応プラットフォーム： iOS / Android</div>
+      <div class="paragraph center">
+        <iframe class="youtube" src="https://www.youtube.com/embed/zd0054I6zos" frameborder="0" allowfullscreen></iframe>
+        <p><em>アナウンストレーラー</em></p>
+      </div>
+      <div class="paragraph">
+        ボンドやMI6エージェントを世界各地に派遣してエージェンシーを拡大し、Mの座を目指しながら世界規模の脅威に立ち向かうモバイル向けストラテジー。
+      </div>
+      <div class="paragraph">
+        <strong>担当内容</strong>
+        <ul>
+          <li>PvP／クラフト／キャラクターアビリティなど複数の機能を設計し、ライセンサー承認まで対応</li>
+          <li>ベータ／ライブオプス段階でのゲーム経済のバランス調整</li>
+          <li>ゲーム内イベントの設計・チューニング</li>
+        </ul>
+      </div>
+    `
+  }
+);
+
+export default [shores, flint, rocksmith, other];

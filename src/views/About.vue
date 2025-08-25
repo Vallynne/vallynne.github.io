@@ -14,6 +14,10 @@
             projects ranging from indie to AAA, including
             <router-link :to="{ path: '/game-projects', hash: '#project-flintlock' }">
               Flintlock: The Siege of Dawn
+            </router-link>
+            and
+            <router-link :to="{ path: '/game-projects', hash: '#project-rocksmithplus' }">
+              Rocksmith+
             </router-link>.
           </span>
 
@@ -22,6 +26,8 @@
             <router-link :to="{ path: '/game-projects', hash: '#project-shores' }">Shores Unknown</router-link>
             』を開発し、その後インディーからAAAまで幅広いプロジェクトに携わり、直近では『
             <router-link :to="{ path: '/game-projects', hash: '#project-flintlock' }">Flintlock: The Siege of Dawn</router-link>
+            』や『
+            <router-link :to="{ path: '/game-projects', hash: '#project-rocksmithplus' }">Rocksmith+</router-link>
             』に参加しました。
           </span>
         </p>
