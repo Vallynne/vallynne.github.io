@@ -401,4 +401,85 @@ const flint: LocalizedProject = Object.assign(
   }
 );
 
-export default [shores, flint];
+// --- Rocksmith+ ---
+const rocksmith: LocalizedProject = Object.assign(
+  new ProjectData(
+    "project-rocksmithplus",
+    "Rocksmith+",
+    "img/projects/project-rocksmith-icon.jpg",
+    "",
+    "#f59e0b",
+    true
+  ),
+  {
+    nameEn: "Rocksmith+",
+    nameJa: "ロックスミス＋",
+    htmlEn: `
+      <div class="paragraph notice">
+        <a target="_blank" href="https://store.steampowered.com/app/2834910/Rocksmith/">
+          <strong>🎸 Rocksmith+ on Steam</strong>
+        </a>
+      </div>
+
+      <div class="paragraph center">
+        <iframe class="youtube" src="https://www.youtube.com/embed/z4GYGwWMUd4" frameborder="0" allowfullscreen></iframe>
+        <p><em>Official Launch Trailer</em></p>
+      </div>
+
+      <div class="paragraph">
+        <strong>Rocksmith+</strong> is Ubisoft’s interactive music-learning service for <strong>guitar and bass</strong>, featuring a large and growing song library, real-time feedback, practice tools, and guided lessons. Players can learn at their own pace with customizable difficulty, technique videos, and arrangement options tuned for different skill levels.
+      </div>
+
+      <div class="paragraph">
+        <strong>My contributions</strong>
+        <ul>
+          <li>Implemented in the Snowdrop engine and <strong>iterated on game UIs</strong> such as <strong>Song Results</strong> and <strong>Pause Screen</strong> in close collaboration with UI designers.</li>
+          <li>Implemented the first prototype of <strong>Tab view</strong>, then collaborated cross-discipline to take it to release (see video below).</li>
+          <li>Worked with the feature owner to take <strong>chord panes</strong> and <strong>bass chord charts</strong> to a release-ready state — article:
+            <a target="_blank" href="https://www.ubisoft.com/en-ca/game/rocksmith/plus/news-updates/37P255QRlxXvNJN09l2asc/bass-chord-charts-how-to-play-bass-chords">Bass Chord Charts (EN)</a>.
+          </li>
+        </ul>
+      </div>
+
+      <div class="paragraph center">
+        <iframe class="youtube" src="https://www.youtube.com/embed/3Kc8Xy4adY0?start=25" frameborder="0" allowfullscreen></iframe>
+        <p><em>Tab view mode — first look (timestamped)</em></p>
+      </div>
+    `,
+    htmlJa: `
+      <div class="paragraph notice">
+        <a target="_blank" href="https://store.steampowered.com/app/2834910/Rocksmith/">
+          <strong>🎸 『ロックスミス＋』 Steam ストアページ</strong>
+        </a>
+      </div>
+
+      <div class="paragraph center">
+        <iframe class="youtube" src="https://www.youtube.com/embed/z4GYGwWMUd4" frameborder="0" allowfullscreen></iframe>
+        <p><em>ローンチトレーラー</em></p>
+      </div>
+
+      <div class="paragraph">
+        <strong>『ロックスミス＋』</strong>は、<strong>ギター／ベース</strong>学習のためのインタラクティブなサービスです。拡張し続ける楽曲ライブラリ、リアルタイムのフィードバック、練習ツール、レッスンを備え、難易度やアレンジを調整しながらスキルに応じて自分のペースで学べます。
+      </div>
+
+      <div class="paragraph">
+        <strong>担当内容</strong>
+        <ul>
+          <li>Snowdropエンジン上で<strong>「楽曲結果」</strong>や<strong>「一時停止」</strong>などのUIを、<strong>UIデザイナーと協力しながらブラッシュアップ</strong>。</li>
+          <li><strong>Tabビュー</strong>の初期プロトタイプを実装し、クロスファンクショナルに連携して製品版まで推進（下記動画）。</li>
+          <li>機能オーナーと協業し、<strong>コード表示ペイン</strong>と<strong>ベースのコード・チャート</strong>を出荷水準まで仕上げ — 解説記事：
+            <a target="_blank" href="https://www.ubisoft.com/ja-jp/game/rocksmith/plus/news-updates/37P255QRlxXvNJN09l2asc/rocksmith-20225">日本語記事</a>。
+          </li>
+        </ul>
+      </div>
+
+      <div class="paragraph center">
+        <iframe class="youtube" src="https://www.youtube.com/embed/3Kc8Xy4adY0?start=25" frameborder="0" allowfullscreen></iframe>
+        <p><em>Tab view mode — first look（タイムスタンプ）</em></p>
+      </div>
+    `
+  }
+);
+
+// export
+export default [shores, flint, rocksmith];
