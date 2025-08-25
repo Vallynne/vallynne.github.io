@@ -70,6 +70,7 @@ export default Vue.extend({
 .header-text {
   flex: 1;
   max-width: 65%;
+  margin-right: 20px;
 }
 
 /* tighter title + intro */
@@ -82,7 +83,7 @@ export default Vue.extend({
 /* photo column */
 .photo {
   flex-shrink: 0;
-  margin-left: 10px;
+  margin: 40px;
 }
 
 .photo img {
