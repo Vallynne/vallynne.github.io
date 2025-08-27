@@ -81,8 +81,8 @@ h1 {
 }
 
 .main {
-    padding: 12px;
-  }
+  padding: 12px;
+}
 
 @media only screen and (min-width: 620px){
 
@@ -101,7 +101,8 @@ h1 {
     padding: 0px 40px 40px 180px;
   }
 
-  .main, .header, .footer {
+  /* ⬇️ Was: .main, .header, .footer { ... } — removed .header */
+  .main, .footer {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -216,6 +217,4 @@ html {
 html::-webkit-scrollbar {     /* Chrome/Safari */
   display: none;
 }
-
-
 </style>
