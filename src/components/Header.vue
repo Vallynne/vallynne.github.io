@@ -12,7 +12,7 @@
     <div class="nav-bar">
       <div class="nav-links">
         <router-link to="/game-projects">{{ t('nav.games') }}</router-link>
-        <router-link to="/">{{ t('nav.about') }}</router-link>
+        <router-link to="/about">{{ t('nav.about') }}</router-link>
         <router-link to="/contact">{{ t('nav.contact') }}</router-link>
       </div>
     </div>
