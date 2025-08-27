@@ -208,5 +208,14 @@ h1 {
   }
 }
 
+html {
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE/Edge */
+}
+
+html::-webkit-scrollbar {     /* Chrome/Safari */
+  display: none;
+}
+
 
 </style>

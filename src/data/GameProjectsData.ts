@@ -23,13 +23,9 @@ const shores: LocalizedProject = Object.assign(
     nameJa: "Shores Unknown",
     htmlEn: `
       <div class="paragraph notice">
+        <strong>Developer:</strong> Vallynne<br>
+        <strong>Role:</strong> Game Director / Game Designer / Programmer<br>
         <strong>Platforms:</strong> PC (Early Access), Nintendo Switch (Unreleased)
-      </div>
-
-      <div class="paragraph notice">
-        <a target="_blank" href="https://store.steampowered.com/app/899460/Shores_Unknown/">
-          <strong>🌊 Shores Unknown on Steam</strong>
-        </a>
       </div>
 
       <div class="paragraph center">
@@ -46,9 +42,7 @@ const shores: LocalizedProject = Object.assign(
 
       <div class="subtitle">
         📄 Combat Case Study (English PDF)
-      </div>
-
-      <div class="paragraph center">
+        <br>
         <a
           class="download-btn"
           href="/doc/Shores-Combat-Case-Study.pdf"
@@ -100,15 +94,11 @@ const shores: LocalizedProject = Object.assign(
       </div>
     `,
     htmlJa: `
-      <div class="paragraph notice">
-        <strong>対応プラットフォーム：</strong> PC（アーリーアクセス）、Nintendo Switch（未発売）
-      </div>
-
-      <div class="paragraph notice">
-        <a target="_blank" href="https://store.steampowered.com/app/899460/Shores_Unknown/">
-          <strong>🌊 『Shores Unknown』 Steam ストアページ</strong>
-        </a>
-      </div>
+        <div class="paragraph notice">
+          <strong>開発：</strong> Vallynne<br>
+          <strong>役割：</strong> ゲームディレクター／ゲームデザイナー／プログラマー<br>
+          <strong>対応プラットフォーム：</strong> PC（アーリーアクセス）、Nintendo Switch（未発売）
+        </div>
 
       <div class="paragraph center">
         <iframe class="youtube" src="https://www.youtube.com/embed/7vIEv6G1f_A" frameborder="0" allowfullscreen></iframe>
@@ -123,9 +113,7 @@ const shores: LocalizedProject = Object.assign(
 
       <div class="subtitle">
         📄 戦闘ケーススタディ（英語PDF）
-      </div>
-
-      <div class="paragraph center">
+        <br>
         <a
           class="download-btn"
           href="/doc/Shores-Combat-Case-Study.pdf"
@@ -193,15 +181,10 @@ const flint: LocalizedProject = Object.assign(
     nameEn: "Flintlock: The Siege of Dawn",
     nameJa: "Flintlock: The Siege of Dawn",
     htmlEn: `
-        <p class="caption" style="margin: -6px 0 10px; opacity: .8;">Developer: A44 Games (in collaboration with Shapefarm)</p>
         <div class="paragraph notice">
+          <strong>Developer:</strong> A44 Games (in collaboration with Shapefarm)<br>
+          <strong>Role:</strong> Senior Technical Designer / Combat Designer<br>
           <strong>Platforms:</strong> PlayStation 5, Xbox Series X|S, PC
-        </div>
-
-        <div class="paragraph notice">
-          <a target="_blank" href="https://store.steampowered.com/app/1832040/Flintlock_The_Siege_of_Dawn/">
-            <strong>⚔ Flintlock: The Siege of Dawn on Steam</strong>
-          </a>
         </div>
 
         <div class="paragraph center">
@@ -209,20 +192,29 @@ const flint: LocalizedProject = Object.assign(
           <p><em>Official Trailer</em></p>
         </div>
 
-        <h2>Gameplay Features</h2>
-        <ul>
-        <li>Fast-paced action combat that blends melee, firearms, and magic.</li>
-        <li>Combo-driven battles with mobility and evasive options.</li>
-        <li>Use explosive abilities for vertical movement and aerial attacks.</li>
-        <li>Explore varied environments filled with enemies and challenges.</li>
-        <li>Collect equipment, strengthen weapons, and upgrade gear.</li>
-        </ul>
+        <div class="paragraph">
+          <strong>Flintlock: The Siege of Dawn</strong> is a souls-lite action RPG where humanity wages war against the gods. As Nor Vanek, joined by her mystical companion Enki, you’ll carve a path through an open world torn between magic and gunpowder. The game combines punishing encounters with cinematic storytelling and approachable design, offering an epic fight for survival and vengeance.
+        </div>
 
         <div class="paragraph">
-        I owned combat behavior and design for many enemies and bosses (including the Act 1 boss <strong>Justice</strong> and the final boss).
-        I designed and tuned <strong>enemy movesets & mechanics</strong>, collaborated with <strong>animation/VFX</strong> for readability, implemented abilities using <strong>Blueprint / Gameplay Ability System</strong>, and handled <strong>encounter placement & tuning</strong> across multiple locations.
-        Each enemy had to meet a quality bar suitable for the final game — enemies that didn’t were cut.
+          <strong>Features:</strong>
+          <ul>
+            <li>Fast-paced action combat that blends melee, firearms, and magic.</li>
+            <li>Combo-driven battles with mobility and evasive options.</li>
+            <li>Use explosive abilities for vertical movement and aerial attacks.</li>
+            <li>Explore varied environments filled with enemies and challenges.</li>
+            <li>Collect equipment, strengthen weapons, and upgrade gear.</li>
+          </ul>
         </div>
+
+      <div class="paragraph">
+        I owned combat behavior and design for many enemies and bosses (including the Act 1 boss <strong>Justice</strong> and the final boss).
+        I designed and tuned <strong>enemy movesets & mechanics</strong>, collaborated with <strong>animation/VFX</strong> for readability,
+        implemented abilities in <strong>Unreal Engine 4</strong> using <strong>Blueprint / Gameplay Ability System</strong>, and handled
+        <strong>encounter placement & tuning</strong> across multiple locations.
+        Each enemy had to meet a quality bar suitable for the final game — enemies that didn’t were cut.
+      </div>
+
 
         <h2>Boss & Enemy Design</h2>
 
@@ -307,15 +299,10 @@ const flint: LocalizedProject = Object.assign(
         </div>
     `,
     htmlJa: `
-        <p class="caption" style="margin: -6px 0 10px; opacity: .8;">開発： A44 Games（Shapefarmと協業）</p>
         <div class="paragraph notice">
+          <strong>開発：</strong> A44 Games（Shapefarmと協業）<br>
+          <strong>役割：</strong> シニア・テクニカルデザイナー／コンバットデザイナー<br>
           <strong>対応プラットフォーム：</strong> PlayStation 5、Xbox Series X|S、PC
-        </div>
-
-        <div class="paragraph notice">
-          <a target="_blank" href="https://store.steampowered.com/app/1832040/Flintlock_The_Siege_of_Dawn/">
-            <strong>⚔ 『Flintlock: The Siege of Dawn』 Steam ストアページ</strong>
-          </a>
         </div>
 
         <div class="paragraph center">
@@ -323,19 +310,27 @@ const flint: LocalizedProject = Object.assign(
           <p><em>公式トレーラー</em></p>
         </div>
 
-        <h2>主な特徴</h2>
-        <ul>
-        <li><strong>近接・銃・魔法</strong>を組み合わせたスピーディーなアクション戦闘。</li>
-        <li>コンボ主体のバトルと多彩な回避・機動アクション。</li>
-        <li><strong>爆発系アビリティ</strong>を使った垂直移動や空中攻撃。</li>
-        <li>多様な環境を探索し、敵との戦闘やチャレンジに挑戦。</li>
-        <li>装備を集め、武器を強化し、ギアをアップグレード可能。</li>
-        </ul>
+        <div class="paragraph">
+          <strong>『Flintlock: The Siege of Dawn』</strong>は、人類と神々の戦いを描くソウルライク寄りのアクションRPGです。主人公ノールと魔法の相棒エンキが、魔法と火薬が交錯する世界を旅し、神々やアンデッドに挑みます。手応えのある戦闘とシネマティックな物語体験を融合させ、壮大な復讐の物語を描きます。
+        </div>
 
         <div class="paragraph">
-        多数の敵やボス（Act1のボス<strong>Justice</strong>や最終ボスなど）の戦闘挙動とデザインを担当しました。
-        <strong>敵のモーション／メカニクス設計</strong>、<strong>アニメーション／VFX</strong>との協業による可読性調整、<strong>Blueprint／Gameplay Ability System</strong>での実装、複数ロケーションでの<strong>エンカウント配置とチューニング</strong>を実施。
-        各敵は<strong>最終版に採用できる品質水準</strong>に到達することが求められ、基準を満たさないものはカットされました。
+          <strong>主な特徴：</strong>
+          <ul>
+            <li><strong>近接・銃・魔法</strong>を組み合わせたスピーディーなアクション戦闘。</li>
+            <li>コンボ主体のバトルと多彩な回避・機動アクション。</li>
+            <li><strong>爆発系アビリティ</strong>を使った垂直移動や空中攻撃。</li>
+            <li>多様な環境を探索し、敵との戦闘やチャレンジに挑戦。</li>
+            <li>装備を集め、武器を強化し、ギアをアップグレード可能。</li>
+          </ul>
+        </div>
+
+        <div class="paragraph">
+          多数の敵やボス（Act1のボス<strong>Justice</strong>や最終ボスなど）の戦闘挙動とデザインを担当しました。
+          <strong>敵のモーション／メカニクス設計</strong>、<strong>アニメーション／VFX</strong>との協業による可読性調整、
+          <strong>Unreal Engine 4</strong>上での<strong>Blueprint／Gameplay Ability System</strong>による実装、
+          複数ロケーションでの<strong>エンカウント配置とチューニング</strong>を実施。
+          各敵は<strong>最終版に採用できる品質水準</strong>に到達することが求められ、基準を満たさないものはカットされました。
         </div>
 
         <h2>ボス・敵デザイン</h2>
@@ -437,15 +432,10 @@ const rocksmith: LocalizedProject = Object.assign(
     nameEn: "Rocksmith+",
     nameJa: "ロックスミス＋",
     htmlEn: `
-      <p class="caption" style="margin: -6px 0 10px; opacity: .8;">Developer: Ubisoft Osaka & Ubisoft San Francisco</p>
       <div class="paragraph notice">
+        <strong>Developer:</strong> Ubisoft Osaka & Ubisoft San Francisco<br>
+        <strong>Role:</strong> Technical Game Designer<br>
         <strong>Platforms:</strong> PlayStation 4/5, iOS, Android, PC
-      </div>
-
-      <div class="paragraph notice">
-        <a target="_blank" href="https://store.steampowered.com/app/2834910/Rocksmith/">
-          <strong>🎸 Rocksmith+ on Steam</strong>
-        </a>
       </div>
 
       <div class="paragraph center">
@@ -474,15 +464,10 @@ const rocksmith: LocalizedProject = Object.assign(
       </div>
     `,
     htmlJa: `
-    <p class="caption" style="margin: -6px 0 10px; opacity: .8;">開発： Ubisoft Osaka & Ubisoft San Francisco</p>
       <div class="paragraph notice">
+        <strong>開発：</strong> Ubisoft Osaka & Ubisoft San Francisco<br>
+        <strong>役割：</strong> テクニカルゲームデザイナー<br>
         <strong>対応プラットフォーム：</strong> PlayStation 4/5、iOS、Android、PC
-      </div>
-
-      <div class="paragraph notice">
-        <a target="_blank" href="https://store.steampowered.com/app/2834910/Rocksmith/">
-          <strong>🎸 『ロックスミス＋』 Steam ストアページ</strong>
-        </a>
       </div>
 
       <div class="paragraph center">
@@ -527,112 +512,126 @@ const other: LocalizedProject = Object.assign(
     nameEn: "Other Projects",
     nameJa: "その他のプロジェクト",
     htmlEn: `
-      <h2>Throne Rush</h2>
-      <p class="caption" style="margin: -6px 0 10px; opacity: .8;">Developer: Nexters</p>
-      <div class="paragraph notice">Platforms: iOS / Android, Browsers</div>
-      <div class="paragraph">
-        <a target="_blank" href="https://www.nexters.com/en/throne-rush/"><strong>Official site</strong></a>
-      </div>
-      <div class="paragraph">
-        An epic online strategy / town builder where you grow a kingdom and expand to claim the Throne.
-      </div>
-      <div class="paragraph">
-        <ul>
-          <li>Command and upgrade huge armies featuring LotR-inspired units, from knights and goblins to dragons and ents</li>
-          <li>Fortify your base with towers and walls</li>
-          <li>Hire and raise mighty heroes with unique abilities</li>
-          <li>Focus on social play: clans, clan wars, guild events and more</li>
-        </ul>
-      </div>
-      <div class="paragraph center">
-        <img src="/img/projects/project-thronerush-1.png" alt="Throne Rush screenshot" style="max-width:100%; height:auto; display:block; margin:0 auto;" />
-      </div>
-      <div class="paragraph">
-        One of Nexters’ early success stories, Throne Rush stayed in operation with regular updates for 10+ years,
-        was <strong>Facebook’s “Game of the Year” (2014)</strong>, and has accumulated <strong>76M+ installs worldwide</strong> over its lifetime.
-      </div>
-      <div class="paragraph">
-        <strong>My contributions</strong>
-        <ul>
-          <li>First playable prototype implemented in Warcraft 3 Map Editor</li>
-          <li>Unit and building design and balance</li>
-          <li>Pitched and designed new live ops features</li>
-          <li>Single-player campaign level/puzzle design</li>
-        </ul>
-      </div>
+    <h2>Throne Rush</h2>
+    <div class="paragraph notice">
+      <strong>Developer:</strong> Nexters<br>
+      <strong>Role:</strong> Game Designer<br>
+      <strong>Platforms:</strong> iOS / Android, Browsers
+    </div>
+    <p class="caption" style="margin: -6px 0 10px; opacity: .8;">Facebook’s “Game of the Year” (2014), 76M+ installs worldwide</p>
+    <div class="paragraph">
+      <a target="_blank" href="https://www.nexters.com/en/throne-rush/"><strong>Official site</strong></a>
+    </div>
+    <div class="paragraph">
+      An epic online strategy / town builder where you grow a kingdom and expand to claim the Throne.
+    </div>
+    <div class="paragraph">
+      <ul>
+        <li>Command and upgrade huge armies featuring LotR-inspired units, from knights and goblins to dragons and ents</li>
+        <li>Fortify your base with towers and walls</li>
+        <li>Hire and raise mighty heroes with unique abilities</li>
+        <li>Focus on social play: clans, clan wars, guild events and more</li>
+      </ul>
+    </div>
+    <div class="paragraph center">
+      <img src="/img/projects/project-thronerush-1.png" alt="Throne Rush screenshot" style="max-width:100%; height:auto; display:block; margin:0 auto;" />
+    </div>
+    <div class="paragraph">
+      One of Nexters’ early success stories, Throne Rush stayed in operation with regular updates for 10+ years,
+      was <strong>Facebook’s “Game of the Year” (2014)</strong>, and has accumulated <strong>76M+ installs worldwide</strong> over its lifetime.
+    </div>
+    <div class="paragraph">
+      <strong>My contributions</strong>
+      <ul>
+        <li>First playable prototype implemented in Warcraft 3 Map Editor</li>
+        <li>Unit and building design and balance</li>
+        <li>Pitched and designed new live ops features</li>
+        <li>Single-player campaign level/puzzle design</li>
+      </ul>
+    </div>
 
-      <h2>James Bond: World of Espionage</h2>
-      <p class="caption" style="margin: -6px 0 10px; opacity: .8;">Developer: Glu Mobile</p>
-      <div class="paragraph notice">Platforms: iOS / Android</div>
-      <div class="paragraph center">
-        <iframe class="youtube" src="https://www.youtube.com/embed/zd0054I6zos" frameborder="0" allowfullscreen></iframe>
-        <p><em>Announcement Trailer</em></p>
-      </div>
-      <div class="paragraph">
-        A mobile strategy title where players deploy Bond and other MI6 agents across the globe, grow their agency,
-        and vie for the role of M while thwarting world-threatening plots.
-      </div>
-      <div class="paragraph">
-        <strong>My contributions</strong>
-        <ul>
-          <li>Designed multiple features including PvP, crafting, and character abilities, ensuring licensor approvals</li>
-          <li>Balance tuning for the game economy during beta and live ops</li>
-          <li>Designed and tuned in-game events</li>
-        </ul>
-      </div>
+    <h2>James Bond: World of Espionage</h2>
+    <div class="paragraph notice">
+      <strong>Developer:</strong> Glu Mobile<br>
+      <strong>Role:</strong> Game Designer<br>
+      <strong>Platforms:</strong> iOS / Android
+    </div>
+    <div class="paragraph center">
+      <iframe class="youtube" src="https://www.youtube.com/embed/zd0054I6zos" frameborder="0" allowfullscreen></iframe>
+      <p><em>Announcement Trailer</em></p>
+    </div>
+    <div class="paragraph">
+      A mobile strategy title where players deploy Bond and other MI6 agents across the globe, grow their agency,
+      and vie for the role of M while thwarting world-threatening plots.
+    </div>
+    <div class="paragraph">
+      <strong>My contributions</strong>
+      <ul>
+        <li>Designed multiple features including PvP, crafting, and character abilities, ensuring licensor approvals</li>
+        <li>Balance tuning for the game economy during beta and live ops</li>
+        <li>Designed and tuned in-game events</li>
+      </ul>
+    </div>
     `,
     htmlJa: `
-      <h2>Throne Rush</h2>
-      <p class="caption" style="margin: -6px 0 10px; opacity: .8;">開発： Nexters</p>
-      <div class="paragraph notice">対応プラットフォーム： iOS / Android、ブラウザ</div>
-      <div class="paragraph">
-        <a target="_blank" href="https://www.nexters.com/en/throne-rush/"><strong>公式サイト</strong></a>
-      </div>
-      <div class="paragraph">
-        王国を育て、拡大し、王座を目指すエピックなオンライン・ストラテジー／タウンビルダー。
-      </div>
-      <div class="paragraph">
-        <ul>
-          <li>騎士やゴブリンからドラゴン、エントまで、LotR風のユニットで構成された大軍勢を指揮・強化</li>
-          <li>タワーや城壁で拠点を要塞化</li>
-          <li>固有アビリティを持つ英雄の雇用・育成</li>
-          <li>クラン、クラン戦、ギルドイベントなどソーシャル要素に注力</li>
-        </ul>
-      </div>
-      <div class="paragraph center">
-        <img src="/img/projects/project-thronerush-1.png" alt="Throne Rush スクリーンショット" style="max-width:100%; height:auto; display:block; margin:0 auto;" />
-      </div>
-      <div class="paragraph">
-        Nexters初期の成功作のひとつであり、10年以上にわたり運用と定期アップデートが続きました。2014年には<strong>Facebook「Game of the Year」</strong>を受賞し、累計<strong>7,600万超のインストール</strong>を記録しています。
-      </div>
-      <div class="paragraph">
-        <strong>担当内容</strong>
-        <ul>
-          <li>Warcraft 3 マップエディタでの初期プレイアブル・プロトタイプ実装</li>
-          <li>ユニット／建物の設計とバランス調整</li>
-          <li>ライブオプス向け新機能の提案・設計</li>
-          <li>シングルプレイヤー・キャンペーンのレベル／パズル設計</li>
-        </ul>
-      </div>
+    <h2>Throne Rush</h2>
+    <div class="paragraph notice">
+      <strong>開発：</strong> Nexters<br>
+      <strong>役割：</strong> ゲームデザイナー<br>
+      <strong>対応プラットフォーム：</strong> iOS / Android、ブラウザ
+    </div>
+    <p class="caption" style="margin: -6px 0 10px; opacity: .8;">Facebook「Game of the Year」(2014)、累計7,600万超のインストール</p>
+    <div class="paragraph">
+      <a target="_blank" href="https://www.nexters.com/en/throne-rush/"><strong>公式サイト</strong></a>
+    </div>
+    <div class="paragraph">
+      王国を育て、拡大し、王座を目指すエピックなオンライン・ストラテジー／タウンビルダー。
+    </div>
+    <div class="paragraph">
+      <ul>
+        <li>騎士やゴブリンからドラゴン、エントまで、LotR風のユニットで構成された大軍勢を指揮・強化</li>
+        <li>タワーや城壁で拠点を要塞化</li>
+        <li>固有アビリティを持つ英雄の雇用・育成</li>
+        <li>クラン、クラン戦、ギルドイベントなどソーシャル要素に注力</li>
+      </ul>
+    </div>
+    <div class="paragraph center">
+      <img src="/img/projects/project-thronerush-1.png" alt="Throne Rush スクリーンショット" style="max-width:100%; height:auto; display:block; margin:0 auto;" />
+    </div>
+    <div class="paragraph">
+      Nexters初期の成功作のひとつであり、10年以上にわたり運用と定期アップデートが続きました。2014年には<strong>Facebook「Game of the Year」</strong>を受賞し、累計<strong>7,600万超のインストール</strong>を記録しています。
+    </div>
+    <div class="paragraph">
+      <strong>担当内容</strong>
+      <ul>
+        <li>Warcraft 3 マップエディタでの初期プレイアブル・プロトタイプ実装</li>
+        <li>ユニット／建物の設計とバランス調整</li>
+        <li>ライブオプス向け新機能の提案・設計</li>
+        <li>シングルプレイヤー・キャンペーンのレベル／パズル設計</li>
+      </ul>
+    </div>
 
-      <h2>James Bond: World of Espionage</h2>
-      <p class="caption" style="margin: -6px 0 10px; opacity: .8;">開発： Glu Mobile</p>
-      <div class="paragraph notice">対応プラットフォーム： iOS / Android</div>
-      <div class="paragraph center">
-        <iframe class="youtube" src="https://www.youtube.com/embed/zd0054I6zos" frameborder="0" allowfullscreen></iframe>
-        <p><em>アナウンストレーラー</em></p>
-      </div>
-      <div class="paragraph">
-        ボンドやMI6エージェントを世界各地に派遣してエージェンシーを拡大し、Mの座を目指しながら世界規模の脅威に立ち向かうモバイル向けストラテジー。
-      </div>
-      <div class="paragraph">
-        <strong>担当内容</strong>
-        <ul>
-          <li>PvP／クラフト／キャラクターアビリティなど複数の機能を設計し、ライセンサー承認まで対応</li>
-          <li>ベータ／ライブオプス段階でのゲーム経済のバランス調整</li>
-          <li>ゲーム内イベントの設計・チューニング</li>
-        </ul>
-      </div>
+    <h2>James Bond: World of Espionage</h2>
+    <div class="paragraph notice">
+      <strong>開発：</strong> Glu Mobile<br>
+      <strong>役割：</strong> ゲームデザイナー<br>
+      <strong>対応プラットフォーム：</strong> iOS / Android
+    </div>
+    <div class="paragraph center">
+      <iframe class="youtube" src="https://www.youtube.com/embed/zd0054I6zos" frameborder="0" allowfullscreen></iframe>
+      <p><em>アナウンストレーラー</em></p>
+    </div>
+    <div class="paragraph">
+      ボンドやMI6エージェントを世界各地に派遣してエージェンシーを拡大し、Mの座を目指しながら世界規模の脅威に立ち向かうモバイル向けストラテジー。
+    </div>
+    <div class="paragraph">
+      <strong>担当内容</strong>
+      <ul>
+        <li>PvP／クラフト／キャラクターアビリティなど複数の機能を設計し、ライセンサー承認まで対応</li>
+        <li>ベータ／ライブオプス段階でのゲーム経済のバランス調整</li>
+        <li>ゲーム内イベントの設計・チューニング</li>
+      </ul>
+    </div>
     `
   }
 );

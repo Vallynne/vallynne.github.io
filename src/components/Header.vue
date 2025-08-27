@@ -1,9 +1,13 @@
 <template>
   <div class="header">
+    <div class="site-title">
+      Ilya Rudnev – Technical Game Designer
+    </div>
+
     <div class="nav-bar">
       <div class="nav-links">
-        <router-link to="/">{{ t('nav.about') }}</router-link>
         <router-link to="/game-projects">{{ t('nav.games') }}</router-link>
+        <router-link to="/">{{ t('nav.about') }}</router-link>
         <router-link to="/contact">{{ t('nav.contact') }}</router-link>
       </div>
 
@@ -39,16 +43,23 @@ export default Vue.extend({
   width: 100%;
 }
 
-/* main nav bar flex row */
+.site-title {
+  font-weight: normal;
+  font-size: 1em;  
+  text-transform: uppercase;
+  padding: 8px 20px 4px 20px;  
+  color: @textColor;
+  text-align: left;
+}
+
 .nav-bar {
   display: flex;
-  justify-content: space-between; /* links left, switch right */
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 0 20px 12px 0px;  
   line-height: 3em;
 }
 
-/* nav links group */
 .nav-links a {
   text-transform: uppercase;
   margin: 0 15px;

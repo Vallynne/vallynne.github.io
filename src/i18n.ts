@@ -16,7 +16,7 @@ export const messages = {
     nav: { about: 'About me', games: 'Games', contact: 'Contact' },
     about: {
       title: 'Nice to meet you!',
-      p1: `I’m Ilya Rudnev, a game designer and developer with over a decade of industry experience, currently based in Sapporo, Japan.`,
+      p1: `I’m Ilya, a game designer and developer with over a decade of industry experience, currently based in Sapporo, Japan.`,
       p2: `I created and shipped <a href="/game-projects#project-shores">Shores Unknown</a>, an Unreal-powered tactical RPG built with a small distributed team, and contributed to several other titles including <a href="/game-projects#project-flintlock">Flintlock: The Siege of Dawn</a> and <a href="/game-projects#project-rocksmith">Rocksmith+</a>.`,
       p3: `With 7+ years of specializing in technical game design (mainly in Unreal Engine), I bring both creative and technical expertise to help teams realize their vision from early concept through to release, with a focus on RPG and action RPG gameplay and combat encounter design.`
     },

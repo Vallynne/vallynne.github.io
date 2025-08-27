@@ -39,4 +39,8 @@ export default Vue.extend({
   margin: 24px 0 16px;
   box-sizing: border-box;
 }
+
+.projects h1 {
+  margin-bottom: 20px;
+}
 </style>
